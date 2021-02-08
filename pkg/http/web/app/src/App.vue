@@ -1,13 +1,16 @@
 <template>
-    <DropdownDemo></DropdownDemo>
+  <div>
+    <Navbar></Navbar>
+    <router-view></router-view>
+  </div>
 </template>
 <script>
-import DropdownDemo from './components/DropdownDemo'
+import Navbar from "./components/Navbar";
 export default {
-    components: {
-        DropdownDemo
-    }
-}
+  components: {
+    Navbar
+  }
+};
 </script>
 <style lang="scss">
 @import "./App.scss";
