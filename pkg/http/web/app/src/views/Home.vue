@@ -1,3 +1,12 @@
 <template>
-  <h1>Hello</h1>
+  <HeroSection />
 </template>
+
+<script>
+import HeroSection from "../components/HeroSection";
+export default {
+  components: {
+    HeroSection
+  }
+};
+</script>
