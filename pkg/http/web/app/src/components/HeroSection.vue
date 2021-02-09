@@ -3,7 +3,7 @@
     <div class="overlay">
       <h1><span class="big-text">Xplore</span> the underwater world!</h1>
       <h2>Search about your favourite fish</h2>
-      <button><router-link to="/explore">Explore</router-link></button>
+      <router-link to="/explore"><button>Explore</button></router-link>
     </div>
     <video class="home-video" autoplay loop muted>
       <source src="../assets/videos/hero.mp4" type="video/mp4" />
@@ -17,9 +17,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  margin-top: -15px;
   border-radius: 5px;
   background-attachment: scroll;
   overflow: hidden;
+  margin-left: -10px;
 }
 
 h1 {
@@ -55,15 +57,12 @@ span {
   bottom: 0px;
   z-index: 2;
 }
-a {
-  color: aqua;
-  text-decoration: none;
-}
 button {
   margin-top: 10px;
   font-size: 1.8em;
   padding: 5px 15px;
   border: none;
+  color: aqua;
   border-radius: 5px;
   background-color: rgb(0, 0, 105);
   margin-left: 46%;
@@ -71,5 +70,6 @@ button {
 button:hover {
   background-color: rgb(2, 2, 248);
   color: aquamarine;
-}
+  cursor: pointer;
+  }
 </style>

@@ -1,12 +1,14 @@
 <template>
-  <HeroSection />
+  <div>
+    <HeroSection />
+  </div>
 </template>
 
 <script>
 import HeroSection from "../components/HeroSection";
 export default {
   components: {
-    HeroSection
+    HeroSection,
   }
 };
 </script>
