@@ -14,7 +14,7 @@
         <p>
           <a href="#">Home</a><br />
           <a href="#">Explore</a><br />
-          <a href="#">Avout Me</a><br />
+          <a href="#">About Me</a><br />
           <a href="#">API Docs</a><br />
         </p>
       </div>
@@ -26,29 +26,31 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
-  background-color: white;
+  background-color: var(--footer-background-color);
 }
 .sub-footer {
   background-color: darkgray;
 }
 h3 {
   font-size: 1.5em;
+  color: var(--footer-h3);
 }
 i {
   font-size: 2rem;
   margin: 20px 0px 10px 40px;
 }
 p {
-  color: gray;
+  color: var(--footer-text);
   font-size: 1.2em;
 }
 a {
   text-decoration: none;
-  color: gray;
+  color: var(--footer-text);
 }
 a:hover {
   color: black;
+  color: var(--footer-link);
 }
 </style>

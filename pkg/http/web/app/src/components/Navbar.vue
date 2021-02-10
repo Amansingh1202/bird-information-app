@@ -57,13 +57,30 @@ export default {
   methods: {
     changeDarkMode() {
       this.darkModeOn = !this.darkModeOn;
+      var data_theme = "light";
+      if (this.darkModeOn) {
+        data_theme = "dark";
+      }
+      document.documentElement.setAttribute("data-theme", data_theme);
+      localStorage.setItem("theme", data_theme);
     }
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .p-menubar {
-  background: white;
+  background: var(--navbar-background);
+  color: var(--navbar-text) !important;
 }
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link
+  .p-menuitem-text {
+  color: var(--navbar-text) !important;
+}
+// .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+//     color: #495057;
+// }
 </style>
