@@ -1,3 +1,14 @@
 <template>
-  <h1>Explore</h1>
+  <div>
+    <FooterComponent />
+  </div>
 </template>
+
+<script>
+import FooterComponent from "../components/FooterComponent";
+export default {
+  components: {
+    FooterComponent
+  }
+};
+</script>

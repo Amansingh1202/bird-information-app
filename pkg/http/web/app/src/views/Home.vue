@@ -8,7 +8,7 @@
 import HeroSection from "../components/HeroSection";
 export default {
   components: {
-    HeroSection,
+    HeroSection
   }
 };
 </script>

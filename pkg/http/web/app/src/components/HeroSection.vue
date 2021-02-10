@@ -21,7 +21,6 @@
   border-radius: 5px;
   background-attachment: scroll;
   overflow: hidden;
-  margin-left: -10px;
 }
 
 h1 {
@@ -71,5 +70,5 @@ button:hover {
   background-color: rgb(2, 2, 248);
   color: aquamarine;
   cursor: pointer;
-  }
+}
 </style>
