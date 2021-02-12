@@ -12,10 +12,10 @@
       <div class="p-col">
         <h3>Quick Links</h3>
         <p>
-          <a href="#">Home</a><br />
-          <a href="#">Explore</a><br />
-          <a href="#">About Me</a><br />
-          <a href="#">API Docs</a><br />
+          <router-link to="/">Home</router-link><br />
+          <router-link to="/explore">Explore</router-link><br />
+          <router-link to="/aboutme">About Me</router-link><br />
+          <router-link to="/apidocs">API Docs</router-link><br />
         </p>
       </div>
     </div>
