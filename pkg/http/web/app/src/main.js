@@ -7,11 +7,13 @@ import "primeicons/primeicons.css";
 import PrimeVue from "primevue/config";
 import Menubar from "primevue/menubar";
 import router from "./router";
+import Card from "primevue/card";
 
 const app = createApp(App);
 app.use(PrimeVue, { ripple: true });
 app.use(router);
 
 app.component("Menubar", Menubar);
+app.component("Card", Card);
 
 app.mount("#app");
