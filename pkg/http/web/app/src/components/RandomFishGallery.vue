@@ -1,5 +1,5 @@
 <template>
-  <card-component />
+  <card-component :loaded="loaded" :fishData="fishData" />
 </template>
 
 <script>
@@ -7,26 +7,27 @@ import CardComponent from "./CardComponent.vue";
 export default {
   data() {
     return {
-      fishData: []
+      fishData: [],
+      loaded: false
     };
   },
   components: {
     CardComponent
   },
   created() {
-    // var _this = this;
+    var _this = this;
     function getData() {
       fetch("http://localhost:3000/api/getRandomFish")
         .then(res => res.json())
         .then(response => {
-          // console.log(response);
           response = response["message"];
-          var message = JSON.parse(response);
-          console.log(message);
-          // _this.fishData = message[0];
+          _this.fishData.push(response[0]);
+          _this.fishData.push(response[1]);
+          _this.fishData.push(response[2]);
         });
     }
     getData();
+    this.loaded = true;
   }
 };
 </script>

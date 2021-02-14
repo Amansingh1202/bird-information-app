@@ -5,10 +5,11 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <Card style="width: 25em">
+              <MyLoader v-if="getMyData" />
+              <Card v-else style="width: 25em">
                 <template #header>
                   <img
-                    src="../assets/images/FishPlaceholder.jpg"
+                    :src="getMyData[0]['Images'].Src"
                     style="height: 10rem"
                   />
                 </template>
@@ -36,10 +37,11 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <Card style="width: 25em">
+              <MyLoader v-if="getMyData" />
+              <Card v-else style="width: 25em">
                 <template #header>
                   <img
-                    src="../assets/images/FishPlaceholder.jpg"
+                    :src="getMyData[1]['Images'].Src"
                     style="height: 10rem"
                   />
                 </template>
@@ -67,10 +69,11 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <Card style="width: 25em">
+              <MyLoader v-if="getMyData" />
+              <Card style="width: 25em" v-else>
                 <template #header>
                   <img
-                    src="../assets/images/FishPlaceholder.jpg"
+                    :src="getMyData[2]['Images'].Src"
                     style="height: 10rem"
                   />
                 </template>
@@ -98,7 +101,25 @@
   </div>
 </template>
 <script>
-export default {};
+import { MyLoader } from "../components/MyLoader";
+export default {
+  data() {
+    return {};
+  },
+  props: ["fishData", "loaded"],
+  computed: {
+    getMyData() {
+      if (this.loaded) {
+        return this.fishData;
+      } else {
+        return false;
+      }
+    }
+  },
+  components: {
+    MyLoader
+  }
+};
 </script>
 <style lang="scss" scoped>
 p {
