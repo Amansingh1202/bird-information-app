@@ -1,5 +1,8 @@
 <template>
-  <card-component :loaded="loaded" :fishData="fishData" />
+  <div>
+    <h1>Fish of the Day</h1>
+    <card-component :loaded="loaded" :fishData="fishData" />
+  </div>
 </template>
 
 <script>
@@ -31,3 +34,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+h1 {
+  color: gray;
+  text-align: center;
+  margin: -5px;
+}
+</style>

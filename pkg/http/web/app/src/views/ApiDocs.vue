@@ -1,15 +1,15 @@
 <template>
   <div>
     <h1>Api Docs</h1>
-    <FooterComponent />
+    <!-- <FooterComponent /> -->
   </div>
 </template>
 
 <script>
-import FooterComponent from "../components/FooterComponent";
+// import FooterComponent from "../components/FooterComponent";
 export default {
   components: {
-    FooterComponent
+    // FooterComponent
   }
 };
 </script>

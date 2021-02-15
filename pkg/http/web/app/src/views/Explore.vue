@@ -1,17 +1,17 @@
 <template>
   <div>
     <random-fish-gallery />
-    <FooterComponent />
+    <search-fish />
   </div>
 </template>
 
 <script>
-import FooterComponent from "../components/FooterComponent";
 import RandomFishGallery from "../components/RandomFishGallery.vue";
+import SearchFish from "../components/SearchFish.vue";
 export default {
   components: {
-    FooterComponent,
-    RandomFishGallery
+    RandomFishGallery,
+    SearchFish
   }
 };
 </script>

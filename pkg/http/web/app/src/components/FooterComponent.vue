@@ -14,7 +14,6 @@
         <p>
           <router-link to="/">Home</router-link><br />
           <router-link to="/explore">Explore</router-link><br />
-          <router-link to="/aboutme">About Me</router-link><br />
           <router-link to="/apidocs">API Docs</router-link><br />
         </p>
       </div>

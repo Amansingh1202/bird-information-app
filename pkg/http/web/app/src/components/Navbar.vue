@@ -44,10 +44,6 @@ export default {
           to: "/explore"
         },
         {
-          label: "About Me",
-          to: "/aboutme"
-        },
-        {
           label: "API Docs",
           to: "/apidocs"
         }
@@ -80,7 +76,4 @@ export default {
   .p-menuitem-text {
   color: var(--navbar-text) !important;
 }
-// .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
-//     color: #495057;
-// }
 </style>

@@ -6,7 +6,7 @@
           <div class="layout-content">
             <div class="content-section implementation">
               <MyLoader v-if="!getMyData" />
-              <Card v-else style="width: 25em">
+              <Card v-else style="width: 25em;;height:75vh">
                 <template #header>
                   <img
                     :src="getMyData[0]['Species Illustration Photo'].src"
@@ -36,7 +36,7 @@
           <div class="layout-content">
             <div class="content-section implementation">
               <MyLoader v-if="!getMyData" />
-              <Card v-else style="width: 25em">
+              <Card v-else style="width: 25em;height:75vh">
                 <template #header>
                   <img
                     :src="getMyData[1]['Species Illustration Photo'].src"
@@ -66,7 +66,7 @@
           <div class="layout-content">
             <div class="content-section implementation">
               <MyLoader v-if="!getMyData" />
-              <Card style="width: 25em" v-else>
+              <Card style="width: 25em;;height:75vh" v-else>
                 <template #header>
                   <img
                     :src="getMyData[2]['Species Illustration Photo'].src"
@@ -95,7 +95,7 @@
   </div>
 </template>
 <script>
-import { MyLoader } from "../components/MyLoader";
+import MyLoader from "../components/MyLoader";
 export default {
   data() {
     return {};

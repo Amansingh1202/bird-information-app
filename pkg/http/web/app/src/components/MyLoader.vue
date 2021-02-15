@@ -5,7 +5,7 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <Card style="width: 25em">
+              <Card style="width: 25em;height:70vh">
                 <template #header>
                   <img
                     src="../assets/images/FishPlaceholder.jpg"
