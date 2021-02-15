@@ -24,10 +24,10 @@ export default {
           _this.fishData.push(response[0]);
           _this.fishData.push(response[1]);
           _this.fishData.push(response[2]);
+          _this.loaded = true;
         });
     }
     getData();
-    this.loaded = true;
   }
 };
 </script>

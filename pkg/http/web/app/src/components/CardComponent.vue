@@ -5,28 +5,26 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <MyLoader v-if="getMyData" />
+              <MyLoader v-if="!getMyData" />
               <Card v-else style="width: 25em">
                 <template #header>
                   <img
-                    :src="getMyData[0]['Images'].Src"
+                    :src="getMyData[0]['Species Illustration Photo'].src"
+                    :alt="getMyData[1]['Species Illustration Photo'].alt"
                     style="height: 10rem"
                   />
                 </template>
                 <template #title>
-                  Advanced Card
+                  {{ removeHTMLTags(getMyData[0]["Species Name"]) }}
                 </template>
                 <template #subtitle>
-                  Card subtitle
+                  {{ removeHTMLTags(getMyData[0]["Color"]) }}
                 </template>
                 <template #content>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Inventore sed consequuntur error repudiandae numquam
-                    deserunt quisquam repellat libero asperiores earum nam
-                    nobis, culpa ratione quam perferendis esse, cupiditate neque
-                    quas!
-                  </p>
+                  <h3>Health Benefits</h3>
+                  <p>{{ removeHTMLTags(getMyData[0]["Health Benefits"]) }}</p>
+                  <h3>Taste</h3>
+                  <p>{{ removeHTMLTags(getMyData[0]["Taste"]) }}</p>
                 </template>
               </Card>
             </div>
@@ -37,28 +35,26 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <MyLoader v-if="getMyData" />
+              <MyLoader v-if="!getMyData" />
               <Card v-else style="width: 25em">
                 <template #header>
                   <img
-                    :src="getMyData[1]['Images'].Src"
+                    :src="getMyData[1]['Species Illustration Photo'].src"
+                    :alt="getMyData[1]['Species Illustration Photo'].alt"
                     style="height: 10rem"
                   />
                 </template>
                 <template #title>
-                  Advanced Card
+                  {{ removeHTMLTags(getMyData[1]["Species Name"]) }}
                 </template>
                 <template #subtitle>
-                  Card subtitle
+                  {{ removeHTMLTags(getMyData[1]["Color"]) }}
                 </template>
                 <template #content>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Inventore sed consequuntur error repudiandae numquam
-                    deserunt quisquam repellat libero asperiores earum nam
-                    nobis, culpa ratione quam perferendis esse, cupiditate neque
-                    quas!
-                  </p>
+                  <h3>Health Benefits</h3>
+                  <p>{{ removeHTMLTags(getMyData[1]["Health Benefits"]) }}</p>
+                  <h3>Taste</h3>
+                  <p>{{ removeHTMLTags(getMyData[1]["Taste"]) }}</p>
                 </template>
               </Card>
             </div>
@@ -69,28 +65,26 @@
         <div class="box">
           <div class="layout-content">
             <div class="content-section implementation">
-              <MyLoader v-if="getMyData" />
+              <MyLoader v-if="!getMyData" />
               <Card style="width: 25em" v-else>
                 <template #header>
                   <img
-                    :src="getMyData[2]['Images'].Src"
+                    :src="getMyData[2]['Species Illustration Photo'].src"
+                    :alt="getMyData[2]['Species Illustration Photo'].alt"
                     style="height: 10rem"
                   />
                 </template>
                 <template #title>
-                  Advanced Card
+                  {{ removeHTMLTags(getMyData[2]["Species Name"]) }}
                 </template>
                 <template #subtitle>
-                  Card subtitle
+                  {{ removeHTMLTags(getMyData[2]["Color"]) }}
                 </template>
                 <template #content>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Inventore sed consequuntur error repudiandae numquam
-                    deserunt quisquam repellat libero asperiores earum nam
-                    nobis, culpa ratione quam perferendis esse, cupiditate neque
-                    quas!
-                  </p>
+                  <h3>Health Benefits</h3>
+                  <p>{{ removeHTMLTags(getMyData[2]["Health Benefits"]) }}</p>
+                  <h3>Taste</h3>
+                  <p>{{ removeHTMLTags(getMyData[2]["Taste"]) }}</p>
                 </template>
               </Card>
             </div>
@@ -118,6 +112,12 @@ export default {
   },
   components: {
     MyLoader
+  },
+  methods: {
+    removeHTMLTags(content) {
+      content = content.replace(/(<([^>]+)>)/gi, "");
+      return content.replace("&nbsp;", "");
+    }
   }
 };
 </script>
