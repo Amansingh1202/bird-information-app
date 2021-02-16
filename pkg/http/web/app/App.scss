@@ -4,13 +4,14 @@ html {
 
 
 :root{
-    --back-color:#f8f9fa;
+    --back-color:#f8f9fad8;
     --footer-background-color:white;
     --footer-text:gray;
     --footer-h3:black;
     --footer-link:black;
     --navbar-background:white;
     --navbar-text:black;
+    --h1-color:gray;
 }
 
 [data-theme="dark"]{
@@ -19,8 +20,9 @@ html {
     --footer-text:#FFFFFF;
     --footer-h3:rgba(255, 255, 255, 0.664);
     --footer-link:black;
-    --navbar-background:#3700B3;
+    --navbar-background:purple;
     --navbar-text:#FFFFFF;
+    --h1-color:ghostwhite;
 }
 
 #container{
@@ -32,7 +34,7 @@ body {
     background-color:var(--back-color);
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-weight: normal;
-    color: #495057;
+    color: var(--navbar-text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 0;

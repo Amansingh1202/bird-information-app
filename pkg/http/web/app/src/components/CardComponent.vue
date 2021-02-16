@@ -2,94 +2,76 @@
   <div>
     <div class="p-grid">
       <div class="p-col">
-        <div class="box">
-          <div class="layout-content">
-            <div class="content-section implementation">
-              <MyLoader v-if="!getMyData" />
-              <Card v-else style="width: 25em;;height:75vh">
-                <template #header>
-                  <img
-                    :src="getMyData[0]['Species Illustration Photo'].src"
-                    :alt="getMyData[1]['Species Illustration Photo'].alt"
-                    style="height: 10rem"
-                  />
-                </template>
-                <template #title>
-                  {{ removeHTMLTags(getMyData[0]["Species Name"]) }}
-                </template>
-                <template #subtitle>
-                  {{ removeHTMLTags(getMyData[0]["Color"]) }}
-                </template>
-                <template #content>
-                  <h3>Health Benefits</h3>
-                  <p>{{ removeHTMLTags(getMyData[0]["Health Benefits"]) }}</p>
-                  <h3>Taste</h3>
-                  <p>{{ removeHTMLTags(getMyData[0]["Taste"]) }}</p>
-                </template>
-              </Card>
-            </div>
-          </div>
-        </div>
+        <MyLoader v-if="!getMyData" />
+        <Card v-else style="width: 25em;;height:75vh;margin-left:10%">
+          <template #header>
+            <img
+              :src="getMyData[0]['Species Illustration Photo'].src"
+              :alt="getMyData[1]['Species Illustration Photo'].alt"
+              style="height: 10rem"
+            />
+          </template>
+          <template #title>
+            {{ removeHTMLTags(getMyData[0]["Species Name"]) }}
+          </template>
+          <template #subtitle>
+            {{ removeHTMLTags(getMyData[0]["Color"]) }}
+          </template>
+          <template #content>
+            <h3>Health Benefits</h3>
+            <p>{{ removeHTMLTags(getMyData[0]["Health Benefits"]) }}</p>
+            <h3>Taste</h3>
+            <p>{{ removeHTMLTags(getMyData[0]["Taste"]) }}</p>
+          </template>
+        </Card>
       </div>
       <div class="p-col">
-        <div class="box">
-          <div class="layout-content">
-            <div class="content-section implementation">
-              <MyLoader v-if="!getMyData" />
-              <Card v-else style="width: 25em;height:75vh">
-                <template #header>
-                  <img
-                    :src="getMyData[1]['Species Illustration Photo'].src"
-                    :alt="getMyData[1]['Species Illustration Photo'].alt"
-                    style="height: 10rem"
-                  />
-                </template>
-                <template #title>
-                  {{ removeHTMLTags(getMyData[1]["Species Name"]) }}
-                </template>
-                <template #subtitle>
-                  {{ removeHTMLTags(getMyData[1]["Color"]) }}
-                </template>
-                <template #content>
-                  <h3>Health Benefits</h3>
-                  <p>{{ removeHTMLTags(getMyData[1]["Health Benefits"]) }}</p>
-                  <h3>Taste</h3>
-                  <p>{{ removeHTMLTags(getMyData[1]["Taste"]) }}</p>
-                </template>
-              </Card>
-            </div>
-          </div>
-        </div>
+        <MyLoader v-if="!getMyData" />
+        <Card v-else style="width: 25em;height:75vh">
+          <template #header>
+            <img
+              :src="getMyData[1]['Species Illustration Photo'].src"
+              :alt="getMyData[1]['Species Illustration Photo'].alt"
+              style="height: 10rem"
+            />
+          </template>
+          <template #title>
+            {{ removeHTMLTags(getMyData[1]["Species Name"]) }}
+          </template>
+          <template #subtitle>
+            {{ removeHTMLTags(getMyData[1]["Color"]) }}
+          </template>
+          <template #content>
+            <h3>Health Benefits</h3>
+            <p>{{ removeHTMLTags(getMyData[1]["Health Benefits"]) }}</p>
+            <h3>Taste</h3>
+            <p>{{ removeHTMLTags(getMyData[1]["Taste"]) }}</p>
+          </template>
+        </Card>
       </div>
       <div class="p-col">
-        <div class="box">
-          <div class="layout-content">
-            <div class="content-section implementation">
-              <MyLoader v-if="!getMyData" />
-              <Card style="width: 25em;;height:75vh" v-else>
-                <template #header>
-                  <img
-                    :src="getMyData[2]['Species Illustration Photo'].src"
-                    :alt="getMyData[2]['Species Illustration Photo'].alt"
-                    style="height: 10rem"
-                  />
-                </template>
-                <template #title>
-                  {{ removeHTMLTags(getMyData[2]["Species Name"]) }}
-                </template>
-                <template #subtitle>
-                  {{ removeHTMLTags(getMyData[2]["Color"]) }}
-                </template>
-                <template #content>
-                  <h3>Health Benefits</h3>
-                  <p>{{ removeHTMLTags(getMyData[2]["Health Benefits"]) }}</p>
-                  <h3>Taste</h3>
-                  <p>{{ removeHTMLTags(getMyData[2]["Taste"]) }}</p>
-                </template>
-              </Card>
-            </div>
-          </div>
-        </div>
+        <MyLoader v-if="!getMyData" />
+        <Card style="width: 25em;;height:75vh" v-else>
+          <template #header>
+            <img
+              :src="getMyData[2]['Species Illustration Photo'].src"
+              :alt="getMyData[2]['Species Illustration Photo'].alt"
+              style="height: 10rem"
+            />
+          </template>
+          <template #title>
+            {{ removeHTMLTags(getMyData[2]["Species Name"]) }}
+          </template>
+          <template #subtitle>
+            {{ removeHTMLTags(getMyData[2]["Color"]) }}
+          </template>
+          <template #content>
+            <h3>Health Benefits</h3>
+            <p>{{ removeHTMLTags(getMyData[2]["Health Benefits"]) }}</p>
+            <h3>Taste</h3>
+            <p>{{ removeHTMLTags(getMyData[2]["Taste"]) }}</p>
+          </template>
+        </Card>
       </div>
     </div>
   </div>

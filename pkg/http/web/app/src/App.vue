@@ -17,4 +17,15 @@ export default {
 </script>
 <style lang="scss">
 @import "../App.scss";
+.p-menubar {
+  background: var(--navbar-background);
+  border: none;
+}
+.p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link
+  .p-menuitem-text {
+  color: var(--navbar-text) !important;
+}
 </style>

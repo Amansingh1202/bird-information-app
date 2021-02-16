@@ -2,31 +2,25 @@
   <div>
     <div class="p-grid">
       <div class="p-col">
-        <div class="box">
-          <div class="layout-content">
-            <div class="content-section implementation">
-              <Card style="width: 25em;height:70vh">
-                <template #header>
-                  <img
-                    src="../assets/images/FishPlaceholder.jpg"
-                    style="height: 10rem"
-                  />
-                </template>
-                <template #title>
-                  Loading ....
-                </template>
-                <template #subtitle>
-                  Loading ....
-                </template>
-                <template #content>
-                  <p>
-                    Loading ....
-                  </p>
-                </template>
-              </Card>
-            </div>
-          </div>
-        </div>
+        <Card style="width: 25em;height:70vh;margin-left:10%">
+          <template #header>
+            <img
+              src="../assets/images/FishPlaceholder.jpg"
+              style="height: 10rem"
+            />
+          </template>
+          <template #title>
+            Loading ....
+          </template>
+          <template #subtitle>
+            Loading ....
+          </template>
+          <template #content>
+            <p>
+              Loading ....
+            </p>
+          </template>
+        </Card>
       </div>
     </div>
   </div>

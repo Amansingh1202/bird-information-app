@@ -68,12 +68,14 @@ export default {
 .p-menubar {
   background: var(--navbar-background);
   color: var(--navbar-text) !important;
+  border: none;
+  padding: 20px;
 }
 .p-menubar
   .p-menubar-root-list
   > .p-menuitem
   > .p-menuitem-link
   .p-menuitem-text {
-  color: var(--navbar-text) !important;
+  color: white !important;
 }
 </style>

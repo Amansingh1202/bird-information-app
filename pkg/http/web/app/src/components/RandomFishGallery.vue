@@ -37,8 +37,9 @@ export default {
 
 <style scoped>
 h1 {
-  color: gray;
+  color: var(--h1-color);
   text-align: center;
   margin: -5px;
+  margin-bottom: 20px;
 }
 </style>
